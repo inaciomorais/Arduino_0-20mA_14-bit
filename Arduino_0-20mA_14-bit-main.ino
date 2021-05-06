@@ -1,5 +1,5 @@
 /*
-Arduino_0-20mA_14-bit-master.ino
+Arduino_0-20mA_14-bit-main.ino
 
 Interfaceamento de Transdutor 0-20mA com Resistor 250r e Arduino aplicando técnica de Oversampling e Decimation (14-bit).
 
