@@ -7,6 +7,6 @@ Realiza leitura analógica 0-20mA e envia valor pela porta serial.
 
 Resistor 250 0.1% Filme metálico 400mW:
 
-https://produto.mercadolivre.com.br/MLB-1620033927-1-un-resistor-filme-metalico-250ohms-01-400mw-_JM?quantity=1
+https://produto.mercadolivre.com.br/MLB-1620033927-1-un-resistor-filme-metalico-250ohms-01-400mw-_JM
 
 A. Inácio Morais - anderson.morais@protonmail.com - (35) 99161-9878
