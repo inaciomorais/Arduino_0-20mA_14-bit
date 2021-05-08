@@ -9,4 +9,6 @@ Resistor 250 0.1% Filme metálico 400mW:
 
 https://produto.mercadolivre.com.br/MLB-1620033927-1-un-resistor-filme-metalico-250ohms-01-400mw-_JM
 
+https://www.youtube.com/watch?v=Cz1FP2SAFvk
+
 A. Inácio Morais - anderson.morais@protonmail.com - (35) 99161-9878
