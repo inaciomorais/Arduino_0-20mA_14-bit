@@ -52,7 +52,7 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
 
 void loop() {
   float _cal=1.000;  /* Valor multiplicador para calibração de leituras via firmware. Trabalhar dentro do range
-                      * 0,800-1,200 (valores acima ou abaixo desse range indicam transdutor ou aferidor/padrão de 
+                      * 0,900-1,100 (valores acima ou abaixo desse range indicam transdutor ou aferidor/padrão de 
                       * calibração muito descalibrado). Podem ser implementadas rotinas para calibração posterior in 
                       * loco com edição, salvamento e recuperação de valores em EEPROM. A criação de menus/rotinas 
                       * de calibração, leitura e escrita em EEPROM não são objeto deste Sketch. Calibrações devem 
