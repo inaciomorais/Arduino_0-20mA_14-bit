@@ -45,7 +45,7 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
 
   for(unsigned int i=0;i<256;i++) _soma += analogRead(pin);  //Oversampling          
     
-  _result = (((float)_soma / 16.0) * 0.992 + 40.133);  // Decimation e Função de Correção Linear
+  _result = (((float)_soma / 16.0) * 0.992 + 40.133);  // Decimation e Função Linear de Correção
     
   return _result;
 }
