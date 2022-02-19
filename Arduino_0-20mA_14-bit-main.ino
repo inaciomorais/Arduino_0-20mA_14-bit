@@ -45,7 +45,14 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
 
   for(unsigned int i=0;i<256;i++) _soma += analogRead(pin);  //Oversampling          
     
-  _result = (((float)_soma / 16.0) * 0.992 + 40.133);  // Decimation e Função Linear de Correção
+  _result = ((float)_soma / 16.0);  // Decimation
+
+  _result = (_result * 0.992 + 40.133);  
+  /* Função Linear de Correção de Desvio para Arduino Uno Rev3 [f(x) = 0,992 * x + 40,133]
+   *
+   * Corrige Erro de Offset e Erro de Ganho inerentes ao microcontrolador ATmega328P 
+   * (Ver páginas 254 e 255 da Datasheet ATmega328P).
+   */
     
   return _result;
 }
