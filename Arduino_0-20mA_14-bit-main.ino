@@ -81,9 +81,9 @@ void loop() {
 
   // Máx. valor inteiro representado por 14 bits = 16383
   // ESCALONAMENTO (Considerando unidade/variável de processo como litros - Tanque1 máx. 5000 litros):
-  //                    (_leitura - 0) / (16383 - 0) = (y - 0l) / (5000l - 0l) 
+  //                    (_leitura - 0) / (16383 - 0) = (y[L] - 0[L]) / (5000[L] - 0[L]) 
   //                    _leitura / 16383 = y / 5000
-  //                    y = (_leitura / 16383) * 5000
+  //                    y = (_leitura / 16383) * 5000 [L]
 
   // É possível realizar multiplas chamadas da função 'analog_14bit' após o tempo de aquisição/comutação, salvando os
   // retornos em diferentes variáveis e efetuando média das leituras obtidas para obter-se uma menor variação. Mas, o   
