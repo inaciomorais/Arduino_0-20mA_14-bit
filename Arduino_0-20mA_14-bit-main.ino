@@ -50,8 +50,10 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
   _result = (_result * 1.0158 + 35.281); 
   /* Função Linear de Correção de Desvio para Arduino Uno Rev3 [f(x) = 1,0158 * x + 35,281]
    *
-   * Corrige Erro de Offset e Erro de Ganho inerentes ao microcontrolador ATmega328P 
-   * (Ver páginas 254 a 256 da Datasheet do ATmega328P-PU).
+   * Corrige erros inerentes ao microcontrolador ATmega328P (Ver páginas 254 a 256 da Datasheet do ATmega328P-PU)  
+   * com uma aproximação linear aplicável ao Arduino Uno Rev3 em Oversampling para 14-bit. Uma função linear de
+   * correção pode ser obtida para outras condições e sistemas microcontrolados com multiplas medições em coparação
+   * aos valores esperados.
    */
     
   return _result;
