@@ -40,7 +40,12 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
   _adc = analogRead(pin);  /* Leituras descartadas para eliminar valores parasitas (Ver datasheet ATmega e Arduino 
                             * Reference). "The ATmega datasheet [...] cautions against switching analog pins in close 
                             * temporal proximity to making A/D readings (analogRead) on other analog pins. This can cause 
-                            * electrical noise and introduce jitter in the analog system." [Arduino Reference]
+                            * electrical noise and introduce jitter in the analog system." [Arduino Reference]. Como as 
+                            * entradas analógicas compartilham um mesmo ADC, leituras em mais de um canal (principalmente
+                            * com trocas rápidas entre os canais) podem gerar valores inesperados. Ocorrendo valores 
+                            * inesperados entre leituras de canais diferentes (mesmo com o descarte das duas primeiras 
+                            * leituras) uma solução é inserir algum delay entre as leituras em diferentes canais (entre 
+                            * chamadas desta função para diferentes canais). 
                             */
 
   for(unsigned int i=0;i<256;i++) _soma += analogRead(pin);  //Oversampling          
