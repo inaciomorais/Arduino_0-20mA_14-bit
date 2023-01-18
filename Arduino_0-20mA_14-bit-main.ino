@@ -25,9 +25,7 @@ void setup()
   pinMode(iw00, INPUT);
   pinMode(qx00, OUTPUT);
   
-  digitalWrite(qx00, LOW);
-  
-  Serial.begin(9600);  //  Inicia comunicação serial com 9600 bauds. Sketch exemplo apresenta comunicação ente Arduino e PC (Monitor Serial).
+  digitalWrite(qx00, LOW); 
 }
 
 float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógicas (Oversampling e Decimation)
