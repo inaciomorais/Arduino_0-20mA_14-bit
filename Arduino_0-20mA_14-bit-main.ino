@@ -17,15 +17,12 @@ A. Inácio Morais - anderson.morais@protonmail.com - (35) 99161-9878 - 2022
 
 */
 
-const byte iw00=A0;
-const byte qx00=4;
-
 void setup()				
 {
-  pinMode(iw00, INPUT);
-  pinMode(qx00, OUTPUT);
+  pinMode(A0, INPUT);
+  pinMode(4, OUTPUT);
   
-  digitalWrite(qx00, LOW); 
+  digitalWrite(4, LOW); 
 }
 
 float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógicas (Oversampling e Decimation)
@@ -80,7 +77,7 @@ void loop() {
                 * Sempre verifique o tempo de aquisição do transdutor aplicado.                
                 */
 
-  _leitura = analog_14bit(iw00);
+  _leitura = analog_14bit(A0);
 
   // Máx. valor inteiro representado por 14 bits = 16383
   // ESCALONAMENTO (Considerando unidade/variável de processo como litros - Tanque1 máx. 5000 litros):
@@ -96,11 +93,11 @@ void loop() {
        
   if (_leitura >= 4750.0 ) {
     delay(1000); // Histerese ou Sensibilidade - evita trepidação do elemento comutador quando limiar é alcançado
-    if (_leitura >= 4750.0 ) digitalWrite(qx00, HIGH); // Liga bomba1 quando Tanque1 atinge 95% da capacidade
+    if (_leitura >= 4750.0 ) digitalWrite(4, HIGH); // Liga bomba1 quando Tanque1 atinge 95% da capacidade
   }
   
   if (_leitura <= 250.0 ) {
     delay(1000); // Histerese ou Sensibilidade - evita trepidação do elemento comutador quando limiar é alcançado
-    if (_leitura <= 250.0 ) digitalWrite(qx00, LOW);  // Desliga bomba1 quando Tanque1 atinge 5% da capacidade
+    if (_leitura <= 250.0 ) digitalWrite(4, LOW);  // Desliga bomba1 quando Tanque1 atinge 5% da capacidade
   }
 }
