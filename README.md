@@ -5,7 +5,7 @@ Exemplo de aplicação de Resistor 250r 0.1% em saída de Transdutor 0-20mA (con
 
 Realiza leitura analógica (0-20mA) representando Tanque de 5000 litros. Dependendo do valor na Entrada Analógica A0, liga/desliga Saída Digital.
 
-Apenas um resistor entre o transdutor e entrada analógica do Arduino
+Apenas um resistor entre a Entrada Analógica do Arduino e o GND. 
 
 Resistor 250 0.1% Filme metálico 400mW:
 
