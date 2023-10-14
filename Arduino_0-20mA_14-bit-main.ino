@@ -13,6 +13,8 @@ Resistor 250 0.1% Filme metálico 400mW:
 
 https://produto.mercadolivre.com.br/MLB-1620033927-1-un-resistor-filme-metalico-250ohms-01-400mw-_JM?quantity=1
 
+https://www.youtube.com/watch?v=Cz1FP2SAFvk
+
 A. Inácio Morais - anderson.morais@protonmail.com - (35) 99161-9878 - 2022
 
 */
@@ -52,7 +54,7 @@ float analog_14bit(byte pin) {  // Função para leituras em Entradas Analógica
    *
    * Corrige erros inerentes ao microcontrolador ATmega328P (Ver páginas 254 a 256 da Datasheet do ATmega328P-PU)  
    * com uma aproximação linear aplicável ao Arduino Uno Rev3 em Oversampling para 14-bit. Uma função linear de
-   * correção pode ser obtida para outras condições e sistemas microcontrolados com multiplas medições em coparação
+   * correção pode ser obtida para outras condições e sistemas microcontrolados com multiplas medições em comparação
    * aos valores esperados.
    */
     
